@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-[85vh] flex items-center mx-auto mb-32 text-foreground overflow-hidden">
+    <section className="relative w-full min-h-[85vh] flex items-center mx-auto mb-0 md:mb-32 text-foreground overflow-hidden">
       {/* Background Decorative Ambient Glow */}
       <div className="absolute top-32 right-0 -z-10 w-75 h-75 sm:w-120 sm:h-120 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 -z-10 w-62.5 h-62.5 sm:w-120 sm:h-120 bg-purple-500/10 rounded-full blur-3xl pointer-events-none" />
