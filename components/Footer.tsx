@@ -5,8 +5,8 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-navbar-background border-t border-gray-200 py-8 text-gray-600">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <footer className="w-full bg-navbar-background border-t border-gray-200 dark:border-slate-800 py-4 text-foreground">
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         {/* Brand or Logo text */}
         <div className="text-sm font-medium">
           Evans Oshoakpeme | Product Designer.
@@ -37,8 +37,8 @@ export default function Footer() {
         </ul>
 
         {/* Copyright */}
-        <div className="text-sm">
-          © {currentYear} Evans Oshoakpeme. All rights reserved.
+        <div className="text-sm text-center">
+          © {currentYear} Evans Oshoakpeme. <br />All rights reserved.
         </div>
       </div>
     </footer>

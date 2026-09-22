@@ -8,12 +8,12 @@ export default function Navbar() {
   /*const [isOpen, setIsOpen] = useState(false);*/
 
   return (
-    <nav className="sticky m-8 left-0 top-0 z-50">
+    <nav className="fixed mx-auto my-6 lg:my-8 left-8 top-0 z-50">
       <div className="max-w-7xl mx-auto">
-        <div className="bg-navbar-background mx-80 rounded-full w-2xl h-12 flex justify-around items-center">
+        <div className="bg-navbar-background px-4 lg:mx-80 rounded-full w-full lg:w-2xl h-12 flex justify-around items-center">
           {/* Desktop Navigation Links */}
           {/* hidden by default (mobile), md:flex renders it on medium devices and up */}
-          <div className="flex justify-between items-center space-x-32 text-xs font-medium">
+          <div className="flex justify-between items-center space-x-16 lg:space-x-32 text-xs font-medium">
             <Link href="/" className="text-foreground hover:text-gray-900 dark:text-foreground dark:hover:text-white">
               HOME
             </Link>

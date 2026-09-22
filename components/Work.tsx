@@ -54,8 +54,8 @@ export default function Work() {
     <section className="w-full max-w-5xl mx-auto px-4 py-12">
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-8">
         <div>
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900">Featured Case Studies</h2>
-          <p className="mt-2 text-slate-600">Discover how we help businesses grow and scale.</p>
+          <h2 className="text-3xl font-bold tracking-tight text-foreground">Featured Work</h2>
+          <p className="mt-2 text-slate-600 dark:text-slate-200">Discover some of my recent projects and success stories.</p>
         </div>
         
         {/* Navigation Buttons */}
@@ -129,7 +129,7 @@ export default function Work() {
             key={index}
             onClick={() => setCurrentIndex(index)}
             className={`h-2 rounded-full transition-all duration-300 ${
-              currentIndex === index ? "w-8 bg-slate-900" : "w-2 bg-slate-300"
+              currentIndex === index ? "w-8 bg-slate-900 dark:bg-slate-700" : "w-2 bg-slate-500 dark:bg-slate-400"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
