@@ -24,7 +24,7 @@ const EDUCATION = [
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen text-foreground py-16 px-4 sm:px-6 lg:px-8 m-8 transitional-colors duration-300">
+    <main className="min-h-screen text-foreground py-16 px-4 sm:px-6 lg:px-8 my-8 mx-auto transitional-colors duration-300">
       {/* Background Decorative Ambient Glow */}
       <div className="absolute top-0 right-0 -z-10 w-75 h-75 sm:w-150 sm:h-150 bg-indigo-500/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 -z-10 w-62.5 h-62.5 sm:w-125 sm:h-125 bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
@@ -53,7 +53,7 @@ export default function AboutPage() {
               Hi, I am <span className="text-foreground">Evans Oshoakpeme</span>
             </h1>
             <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-              I am a passionate product designer and frontend developer with a strong focus on creating user-centric digital experiences. My journey in tech has been driven by curiosity, creativity, and a commitment to continuous learning.
+              I am a passionate product designer with a strong focus on creating user-centric digital experiences. My journey in tech has been driven by curiosity, creativity, and a commitment to continuous learning.
             </p>
             <p className="text-slate-600 dark:text-slate-400">
               When I am not designing or developing, you can find me exploring new design trends, or learning about the latest technologies.
