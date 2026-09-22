@@ -6,12 +6,12 @@ export default function Hero() {
   return (
     <section className="relative w-full min-h-[85vh] flex items-center mx-auto mb-32 text-foreground overflow-hidden">
       {/* Background Decorative Ambient Glow */}
-      <div className="absolute top-0 right-0 -z-10 w-75 h-75 sm:w-120 sm:h-120 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-32 right-0 -z-10 w-75 h-75 sm:w-120 sm:h-120 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 -z-10 w-62.5 h-62.5 sm:w-120 sm:h-120 bg-purple-500/10 rounded-full blur-3xl pointer-events-none" />
 
       {/* Main Container */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-4 py-8 md:py-12 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+      <div className="max-w-7xl md:w-5xl mx-auto px-4 sm:px-6 md:px-8 py-8 md:py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-32 items-center">
           
           {/* Left Side: Text Content */}
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left space-y-6 max-w-2xl mx-auto lg:mx-0">
@@ -33,7 +33,7 @@ export default function Hero() {
                 height={100}
                 className="rounded-2xl border border-slate-700/50 shadow-lg"
               />
-              <div className="flex flex-col w-full sm:w-auto">
+              <div className="flex flex-col w-full sm:w-auto md:text-left">
                 <p>Product Designer</p>
                 <p className='text-xs'>UX Design, UI Design, User Research, Usability Testing</p>
               </div>
@@ -43,8 +43,15 @@ export default function Hero() {
           {/* Right Side: Responsive Visual Container */}
           <div className="relative w-full aspect-square max-w-112.5 lg:max-w-none mx-auto flex items-center justify-center">
             <div className="relative w-full h-full rounded-2xl overflow-hidden">
+              <Image
+                src="/quotable.jpg"
+                alt="Evans Oshoakpeme"
+                width={450}
+                height={160}
+                className="hidden lg:block border border-slate-700/50 shadow-lg"
+              />
               {/* Section for external links */}
-              <p className="text-xs sm:text-xs md:text-xs text-center lg:text-left px-4 mt-12 lg:mt-56">
+              <p className="text-xs sm:text-xs md:text-xs text-center md:text-left px-4 mt-12">
                 Use the links below to explore my work and connect with me.
               </p>
               <div className="flex flex-row md:flex-col justify-center px-4 gap-4 space-x-6 mt-6 lg:mt-4">

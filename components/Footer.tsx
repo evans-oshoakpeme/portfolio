@@ -6,7 +6,7 @@ export default function Footer() {
 
   return (
     <footer className="w-full bg-navbar-background border-t border-gray-200 dark:border-slate-800 py-4 text-foreground">
-      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto md:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
         {/* Brand or Logo text */}
         <div className="text-sm font-medium">
           Evans Oshoakpeme | Product Designer.
