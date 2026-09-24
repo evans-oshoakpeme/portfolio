@@ -42,13 +42,13 @@ export default function Hero() {
 
           {/* Right Side: Responsive Visual Container */}
           <div className="relative w-full aspect-square max-w-112.5 lg:max-w-none mx-auto flex items-center justify-center">
-            <div className="relative w-full h-full rounded-2xl overflow-hidden">
+            <div className="relative border border-navbar-background shadow-lg w-full h-full rounded-2xl overflow-hidden">
               <Image
-                src="/quotable.jpg"
+                src="/quotable2.jpg"
                 alt="Evans Oshoakpeme"
                 width={450}
                 height={160}
-                className="hidden lg:block border border-slate-700/50 shadow-lg"
+                className="border border-navbar-background shadow-lg"
               />
               {/* Section for external links */}
               <p className="text-xs sm:text-xs md:text-xs text-center md:text-left px-4 mt-12">

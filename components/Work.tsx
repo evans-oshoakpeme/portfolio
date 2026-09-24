@@ -117,7 +117,7 @@ export default function Work() {
       </div>
 
       {/* Carousel Window */}
-      <div className="overflow-hidden rounded-2xl bg-slate-50 border border-slate-100 shadow-sm">
+      <div className="overflow-hidden rounded-2xl bg-slate-200 border border-slate-100 shadow-sm">
         <div 
           className="flex transition-transform duration-500 ease-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -128,7 +128,7 @@ export default function Work() {
           {caseStudies.map((study) => (
             <div key={study.id} className="w-full shrink-0 grid grid-cols-1 md:grid-cols-2 gap-8 p-6 md:p-12 items-center">
               {/* Image Container */}
-              <div className="relative h-64 md:h-96 w-full overflow-hidden rounded-xl bg-slate-200">
+              <div className="relative h-64 md:h-96 w-full overflow-hidden rounded-xl bg-slate-300">
                 <Image
                   src={study.image}
                   alt={study.title}
