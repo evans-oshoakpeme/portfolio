@@ -96,18 +96,9 @@ export default function Work() {
           <h2 className="text-3xl font-bold tracking-tight text-foreground">Featured Work</h2>
           <p className="mt-2 text-slate-600 dark:text-slate-200">Discover some of my recent projects and success stories.</p>
         </div>
-
-        <div
-        className="flex transition-transform duration-300 ease-out will-change-transform cursor-grab active:cursor-grabbing"
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-        onTouchStart={onTouchStart}
-        onTouchMove={onTouchMove}
-        onTouchEnd={onTouchEnd}
-      >
-      </div>
         
         {/* Navigation Buttons */}
-        <div className="flex gap-2 mt-4 md:mt-0">
+        <div className="hidden md:flex gap-2 mt-4 md:mt-0">
           <button
             onClick={prevSlide}
             className="p-3 rounded-full border border-slate-200 bg-white hover:bg-slate-50 transition-colors text-slate-700"
@@ -130,6 +121,9 @@ export default function Work() {
         <div 
           className="flex transition-transform duration-500 ease-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
         >
           {caseStudies.map((study) => (
             <div key={study.id} className="w-full shrink-0 grid grid-cols-1 md:grid-cols-2 gap-8 p-6 md:p-12 items-center">
