@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState, useRef, TouchEvent } from "react";
 import Image from "next/image";
 
 interface CaseStudy {
@@ -41,6 +41,8 @@ const caseStudies: CaseStudy[] = [
 
 export default function Work() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev === caseStudies.length - 1 ? 0 : prev + 1));
@@ -50,6 +52,43 @@ export default function Work() {
     setCurrentIndex((prev) => (prev === 0 ? caseStudies.length - 1 : prev - 1));
   };
 
+   const minSwipeDistance = 50;
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? caseStudies.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === caseStudies.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const onTouchStart = (e: TouchEvent) => {
+    touchEndX.current = null; // Reset end touch pointer
+    touchStartX.current = e.targetTouches[0].clientX;
+  };
+
+  const onTouchMove = (e: TouchEvent) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+
+    const distance = touchStartX.current - touchEndX.current;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      handleNext();
+    } else if (isRightSwipe) {
+      handlePrev();
+    }
+  };
+
   return (
     <section className="w-full max-w-5xl mx-auto px-4 py-12">
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-8">
@@ -57,6 +96,15 @@ export default function Work() {
           <h2 className="text-3xl font-bold tracking-tight text-foreground">Featured Work</h2>
           <p className="mt-2 text-slate-600 dark:text-slate-200">Discover some of my recent projects and success stories.</p>
         </div>
+
+        <div
+        className="flex transition-transform duration-300 ease-out will-change-transform cursor-grab active:cursor-grabbing"
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+      >
+      </div>
         
         {/* Navigation Buttons */}
         <div className="flex gap-2 mt-4 md:mt-0">
