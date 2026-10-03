@@ -15,13 +15,13 @@ interface CaseStudy {
 const caseStudies: CaseStudy[] = [
   {
     id: 1,
-    title: "Revolutionizing E-Commerce Scale",
-    category: "Development",
-    description: "How we helped a global retailer migrate to Next.js and achieve a 40% increase in conversion rates.",
-    image: "",
-    link: "/case-studies/ecommerce",
+    title: "A maternal health platform for underserved communities",
+    category: "Product Design",
+    description: "How I designed a user-centered solution to address the unique needs of expectant mothers in Nigeria.",
+    image: "/mombee-icon.jpg",
+    link: "/case-study/mombee",
   },
-  {
+  /*{
     id: 2,
     title: "AI-Powered Financial Insights",
     category: "FinTech",
@@ -36,7 +36,7 @@ const caseStudies: CaseStudy[] = [
     description: "A complete design system overhaul for a remote-first collaboration platform.",
     image: "",
     link: "/case-studies/design-system",
-  },
+  },*/
 ];
 
 export default function Work() {
@@ -128,7 +128,7 @@ export default function Work() {
           {caseStudies.map((study) => (
             <div key={study.id} className="w-full shrink-0 grid grid-cols-1 md:grid-cols-2 gap-8 p-6 md:p-12 items-center">
               {/* Image Container */}
-              <div className="relative h-64 md:h-96 w-full overflow-hidden rounded-xl bg-slate-300">
+              <div className="relative h-64 md:h-96 w-full overflow-hidden rounded-xl bg-slate-100">
                 <Image
                   src={study.image}
                   alt={study.title}
@@ -153,7 +153,7 @@ export default function Work() {
                 <div>
                   <a
                     href={study.link}
-                    className="inline-flex items-center justify-center px-5 py-3 text-sm font-medium text-white bg-slate-900 rounded-lg hover:bg-slate-800 transition-colors"
+                    className="inline-flex items-center justify-center px-5 py-3 text-sm font-medium text-white bg-button-background rounded-lg hover:bg-slate-800 transition-colors"
                   >
                     Read Case Study
                   </a>

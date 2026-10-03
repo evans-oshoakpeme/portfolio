@@ -85,9 +85,9 @@ export default function AboutPage() {
             {SKILLS.map((skillGroup) => (
               <div 
                 key={skillGroup.category} 
-                className="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm"
+                className="p-6 bg-slate-50 dark:bg-button-background rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm"
               >
-                <h3 className="text-lg font-semibold text-indigo-600 dark:text-indigo-400 mb-4">
+                <h3 className="text-lg font-semibold text-indigo-600 dark:text-indigo-300 mb-4">
                   {skillGroup.category}
                 </h3>
                 <ul className="flex flex-wrap gap-2">
@@ -114,11 +114,11 @@ export default function AboutPage() {
             {EXPERIENCES.map((exp, index) => (
               <div 
                 key={index} 
-                className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800"
+                className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-6 bg-slate-50 dark:bg-button-background rounded-xl border border-slate-200 dark:border-slate-800"
               >
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 dark:text-white">{exp.role}</h3>
-                  <p className="text-slate-500 dark:text-slate-400">{exp.company}</p>
+                  <p className="text-slate-500 dark:text-slate-300">{exp.company}</p>
                 </div>
                 <span className="mt-2 sm:mt-0 text-sm font-semibold inline-block px-3 py-1 bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 rounded-full max-w-max">
                   {exp.period}
@@ -137,11 +137,11 @@ export default function AboutPage() {
             {EDUCATION.map((edu, index) => (
               <div 
                 key={index} 
-                className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800"
+                className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-6 bg-slate-50 dark:bg-button-background rounded-xl border border-slate-200 dark:border-slate-800"
               >
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 dark:text-white">{edu.degree}</h3>
-                  <p className="text-slate-500 dark:text-slate-400">{edu.institution}</p>
+                  <p className="text-slate-500 dark:text-slate-300">{edu.institution}</p>
                 </div>
                 <span className="mt-2 sm:mt-0 text-sm font-semibold inline-block px-3 py-1 bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 rounded-full max-w-max">
                   {edu.year}

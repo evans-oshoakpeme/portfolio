@@ -9,33 +9,33 @@ interface Project {
   title: string;
   description: string;
   tags: string[];
-  category: "Frontend" | "Design";
+  category: "Frontend Development" | "Product Design";
   liveUrl: string;
 }
 
 const projectsData: Project[] = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-stack online store featuring real-time inventory, secure Stripe checkout, and a comprehensive admin dashboard.",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe"],
-    category: "Frontend",
-    liveUrl: "https://example.com",
+    title: "Personalized Motivation App",
+    description: "A web application that provides personalized motivational content.",
+    tags: ["Vanilla JavaScript", "Google Gemini API", "HTML5", "CSS3"],
+    category: "Frontend Development",
+    liveUrl: "https://motivate-me-seven.vercel.app",
   },
   {
     id: 2,
-    title: "Fitness Tracker App",
-    description: "A mobile-first web app to track workouts, log daily nutrition, and visualize fitness progress with dynamic charts.",
-    tags: ["React Native", "Expo", "Supabase", "Tailwind"],
-    category: "Frontend",
-    liveUrl: "https://example.com",
+    title: "Product Verification App",
+    description: "A mobile application for verifying product information and ensuring quality control.",
+    tags: ["Figma", "Wireframing", "Design Thinking", "Information Architecture"],
+    category: "Product Design",
+    liveUrl: "https://www.figma.com/design/DwGc4cMDZgQMdH61sSlrWN/VerifyMe?node-id=1-2&t=yfhtypHgAdQbbbDB-1",
   },
-  {
+  /*{
     id: 3,
     title: "AI Image Dashboard",
     description: "A SaaS interface integrating generative AI models, featuring smart user workspace management and usage metrics.",
     tags: ["Next.js", "OpenAI API", "Prisma", "PostgreSQL"],
-    category: "Frontend",
+    category: "Frontend Development",
     liveUrl: "https://example.com",
   },
   {
@@ -43,12 +43,12 @@ const projectsData: Project[] = [
     title: "Smart Home UI Kit",
     description: "A modern design system and UI prototype for controlling IoT smart home devices with dark mode optimization.",
     tags: ["Figma", "UI/UX", "Design System"],
-    category: "Design",
+    category: "Product Design",
     liveUrl: "https://example.com",
-  },
+  },*/
 ];
 
-const categories: ("All" | Project["category"])[] = ["All", "Frontend", "Design"];
+const categories: ("All" | Project["category"])[] = ["All", "Frontend Development", "Product Design"];
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState<string>("All");
@@ -94,7 +94,7 @@ export default function Projects() {
           {filteredProjects.map((project) => (
             <article
               key={project.id}
-              className="group flex flex-col bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700/80 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden hover:-translate-y-1"
+              className="group flex flex-col bg-slate-50 dark:bg-button-background rounded-2xl border border-slate-200 dark:border-slate-700/80 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden hover:-translate-y-1"
             >
               {/* Card Content Wrapper */}
               <div className="p-6 sm:p-8 flex flex-col grow">
