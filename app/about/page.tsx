@@ -8,13 +8,13 @@ import Image from "next/image";
 // Mock data structure for clean code maintenance
 const SKILLS = [
   { category: "Frontend", items: ["React 19", "Next.js 16", "TypeScript", "Tailwind CSS"] },
-  { category: "UX Design", items: ["Figma", "Adobe XD", "User Research"] },
+  { category: "UX Design", items: ["Figma", "Adobe XD", "UX Research", "Information Architecture"] },
   { category: "Other Tools", items: ["Git", "Vercel"] },
 ];
 
 const EXPERIENCES = [
   /*{ role: "Product Designer", company: "TechCorp", period: "2024 - Present" },*/
-  { role: "QA Engineer", company: "Gilah Global Limited", period: "2021 - 2023" },
+  { role: "Visual Designer & Manual Tester", company: "Gilah Global Limited", period: "2021 - 2023" },
 ];
 
 const EDUCATION = [
@@ -50,7 +50,7 @@ export default function AboutPage() {
           {/* Text Bio */}
           <div className="md:col-span-7 space-y-4 text-center md:text-left">
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground">
-              Hi, I am <span className="text-foreground">Evans Oshoakpeme</span>
+              Hi, My Name is <span className="text-foreground">Evans Oshoakpeme</span>
             </h1>
             <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
               I am a passionate product designer with a strong focus on creating user-centric digital experiences. My journey in tech has been driven by curiosity, creativity, and a commitment to continuous learning.
@@ -66,7 +66,7 @@ export default function AboutPage() {
                 Get in Touch
               </a>
               <a 
-                href="/resume.pdf" 
+                href="/EvansOshoakpeme-Resume.pdf" 
                 download
                 className="px-6 py-2.5 bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-medium rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 transition"
               >
