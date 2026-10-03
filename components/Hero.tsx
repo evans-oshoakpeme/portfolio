@@ -35,7 +35,7 @@ export default function Hero() {
               />
               <div className="flex flex-col w-full sm:w-auto md:text-left">
                 <p>Product Designer</p>
-                <p className='text-xs'>UX Design, UI Design, User Research, Usability Testing</p>
+                <p className='text-xs'>UX Design, UI Design, UX Research, Usability Testing, Information Architecture</p>
               </div>
             </div>
           </div>
@@ -55,29 +55,35 @@ export default function Hero() {
                 Use the links below to explore my work and connect with me.
               </p>
               <div className="flex flex-row md:flex-col justify-center px-4 gap-4 space-x-6 mt-6 lg:mt-4">
-                <div className="flex flex-row justify-left items-center gap-4">
-                  <Link href="https://www.linkedin.com/in/evans-oshoakpeme/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <div>
+                  <Link href="https://www.linkedin.com/in/evans-oshoakpeme/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+                    className="flex flex-row justify-left items-center gap-4"
+                  >
                     <FaLinkedin className="h-6 w-6 text-foreground hover:text-indigo-500 transition-colors" />
+                    <p className="text-xs hidden md:block text-muted-foreground">
+                      Connect with me on LinkedIn.
+                    </p>
                   </Link>
-                  <p className="text-xs hidden md:block text-muted-foreground">
-                    Connect with me on LinkedIn.
-                  </p>
                 </div>
-                <div className="flex flex-row justify-left items-center gap-4">
-                  <Link href="https://github.com/evans-oshoakpeme" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <div>
+                  <Link href="https://github.com/evans-oshoakpeme" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+                    className="flex flex-row justify-left items-center gap-4"
+                  >
                     <FaGithub className="h-6 w-6 text-foreground hover:text-indigo-500 transition-colors" />
+                    <p className="text-xs hidden md:block text-muted-foreground">
+                      Explore my GitHub repositories.
+                    </p>
                   </Link>
-                  <p className="text-xs hidden md:block text-muted-foreground">
-                    Explore my GitHub repositories.
-                  </p>
                 </div>
-                <div className="flex flex-row justify-left items-center gap-4">
-                  <a href="mailto:ev.oshoakpeme@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email">
+                <div>
+                  <a href="mailto:ev.oshoakpeme@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email"
+                    className="flex flex-row justify-left items-center gap-4"
+                  >
                     <FaEnvelope className="h-6 w-6 text-foreground hover:text-indigo-500 transition-colors" />
-                  </a>
-                  <p className="text-xs hidden md:block text-muted-foreground">
+                    <p className="text-xs hidden md:block text-muted-foreground">
                     Reach out to me via email for inquiries or collaborations.
-                  </p>
+                    </p>
+                  </a> 
                 </div>
               </div>
             </div>
