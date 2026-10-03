@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { FaLinkedin, FaGithub, FaDribbble, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 import Link from 'next/link';
 
 export default function Hero() {
