@@ -12,18 +12,18 @@ export default function Hero() {
       {/* Main Container */}
       <div className="max-w-7xl md:w-5xl mx-auto px-4 sm:px-6 md:px-8 py-8 md:py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-32 items-center">
-          
+
           {/* Left Side: Text Content */}
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left space-y-6 max-w-2xl mx-auto lg:mx-0">
-            
+
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight">
               Evans Oshoakpeme
             </h1>
-            
+
             <p className="text-base sm:text-lg md:text-2xl font-medium max-w-xl">
               I am passionate about designing and building experiences that are equitable, enjoyable, and useful.
             </p>
-            
+
             {/* Picture and roles */}
             <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto pt-2">
               <Image
@@ -69,14 +69,6 @@ export default function Hero() {
                   </Link>
                   <p className="text-xs hidden md:block text-muted-foreground">
                     Explore my GitHub repositories.
-                  </p>
-                </div>
-                <div className="flex flex-row justify-left items-center gap-4">
-                  <Link href="https://dribbble.com/evans-oshoakpeme" target="_blank" rel="noopener noreferrer" aria-label="Dribbble">
-                    <FaDribbble className="h-6 w-6 text-foreground hover:text-indigo-500 transition-colors" />
-                  </Link>
-                  <p className="text-xs hidden md:block text-muted-foreground">
-                    Check out my Dribbble portfolio.
                   </p>
                 </div>
                 <div className="flex flex-row justify-left items-center gap-4">
